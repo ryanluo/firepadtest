@@ -1,0 +1,21 @@
+<html>
+<head>
+	<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+	<link rel="stylesheet" href="/stylesheets/codemirror.css" />
+    	<script src="/javascripts/codemirror.js"></script>
+
+	<!-- Download from http://www.firepad.io/firepad.zip -->
+    	<link rel="stylesheet" href="/stylesheets/firepad.css" />
+    	<script src="/javascripts/firepad.js"></script>	
+</head>
+<body>
+	<p>whassap</p>
+	<div id="firepad"></div>
+    	<script>
+      		var firepadRef = new Firebase('https://fire-base-test.firebaseio.com/');
+      		var codeMirror = CodeMirror(document.getElementById('firepad'), { lineWrapping: true });
+      		var firepad = Firepad.fromCodeMirror(firepadRef, codeMirror,
+          		{ richTextShortcuts: true, richTextToolbar: true });
+    	</script>
+</body>
+</html>
